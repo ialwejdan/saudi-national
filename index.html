@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061a18">
+  <meta name="description" content="رحلة رقمية تفاعلية لاكتشاف مناطق المملكة العربية السعودية وهوية اليوم الوطني السعودي 96.">
+  <title>اكتشف المملكة | عزّنا بطبعنا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main id="app">
+    <section id="homeView" class="home-view" aria-labelledby="homeTitle">
+      <section class="home-hero">
+        <div class="home-hero-media" aria-hidden="true">
+          <img src="assets/home-1.jpg" alt="">
+          <div class="home-hero-shade"></div>
+          <div class="home-texture"></div>
+        </div>
+
+        <div class="hero-side-pattern hero-side-pattern-right" aria-hidden="true"></div>
+        <div class="hero-side-pattern hero-side-pattern-left" aria-hidden="true"></div>
+       <!--<div class="hero-top-stitch" aria-hidden="true"></div> -->
+
+        <header class="home-header">
+          <a class="identity-logo" href="#home" aria-label="العودة إلى الصفحة الرئيسية">
+            <img src="assets/brand-logo.png" alt="عزّنا بطبعنا">
+          </a>
+
+          <!-- <div class="identity-ribbon" aria-hidden="true">
+            <i class="c-blue"></i>
+            <i class="c-pink"></i>
+            <i class="c-lime"></i>
+            <i class="c-green"></i>
+            <i class="c-purple"></i>
+            <i class="c-earth"></i>
+          </div>-->
+        </header>
+
+        <div class="home-stage">
+          <section class="map-column" aria-label="خريطة مناطق المملكة العربية السعودية">
+            
+            <div class="map-glow" aria-hidden="true"></div>
+
+            <div class="map-stage">
+              <svg
+                id="saudiMap"
+                viewBox="0 0 900 680"
+                role="img"
+                aria-label="خريطة تفاعلية للمناطق الإدارية الثلاث عشرة في المملكة العربية السعودية"
+              ></svg>
+              <div id="mapStatus" class="map-status" role="status">جاري تحميل الخريطة...</div>
+            </div>
+
+           
+          </section>
+
+          <section class="home-copy">
+            <div class="title-ornament" aria-hidden="true">
+              <span></span><i></i><i></i><i></i><span></span>
+            </div>
+
+            <span class="eyebrow">المملكة العربية السعودية</span>
+            <h1 id="homeTitle">اكتشف<br><strong>المملكة</strong></h1>
+            <p class="home-lead">من طبع إلى طبع</p>
+            <p class="home-body">
+              لكل منطقة روح، وبصمة، وشواهد، وحكاية صنعت جزءًا من ذاكرة المملكة.
+              اختر المنطقة من الخريطة وادخل مباشرة إلى قصتها.
+            </p>
+
+           
+          </section>
+        </div>
+
+        <div class="hero-bottom-border" aria-hidden="true"></div>
+      </section>
+
+      <section class="national-day-section" aria-labelledby="nationalDayTitle">
+        <div class="national-texture" aria-hidden="true"></div>
+        <div class="national-side-weave national-side-weave-right" aria-hidden="true"></div>
+        <div class="national-side-weave national-side-weave-left" aria-hidden="true"></div>
+
+        <div class="national-inner">
+          <div class="national-title-row">
+            <div class="title-rail title-rail-right" aria-hidden="true"></div>
+            <div class="national-heading">
+              <span class="section-kicker">قصة وطن</span>
+              <h2 id="nationalDayTitle">عن اليوم الوطني السعودي 96</h2>
+            </div>
+            <div class="title-rail title-rail-left" aria-hidden="true"></div>
+          </div>
+
+          <p class="national-copy">
+            في 23 سبتمبر من كل عام، تستعيد المملكة ذكرى توحيدها وإعلان اسم المملكة العربية السعودية
+            عام 1932م على يد الملك عبدالعزيز بن عبدالرحمن آل سعود. ويأتي اليوم الوطني 96 امتدادًا
+            لقصة وطنٍ يعتز بهويته، ويبني مستقبله بثقة وطموح.
+          </p>
+
+          <div class="national-stats" aria-label="أرقام مرتبطة بالتجربة">
+            <div class="national-stat stat-blue">
+              <strong>13</strong>
+              <span>منطقة</span>
+            </div>
+            <div class="national-stat stat-pink">
+              <strong>96</strong>
+              <span>عامًا من المجد</span>
+            </div>
+            <div class="national-stat stat-purple">
+              <strong>2030</strong>
+              <span>رؤية وطن</span>
+            </div>
+          </div>
+
+          <div class="national-values">
+            <article class="value-item value-green">
+              <div class="value-pattern" aria-hidden="true"></div>
+              <span>01</span>
+              <strong>وحدة وطن</strong>
+              <p>قصة جمعت مناطق المملكة تحت اسمٍ ورايةٍ واحدة.</p>
+            </article>
+
+            <article class="value-item value-purple">
+              <div class="value-pattern" aria-hidden="true"></div>
+              <span>02</span>
+              <strong>هوية متجذرة</strong>
+              <p>تراث متنوع يظهر في العمارة والحِرف وذاكرة المكان.</p>
+            </article>
+
+            <article class="value-item value-blue">
+              <div class="value-pattern" aria-hidden="true"></div>
+              <span>03</span>
+              <strong>رؤية للمستقبل</strong>
+              <p>طموح يستثمر في الإنسان والمكان ويواصل رحلة التطور.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="national-bottom-pattern" aria-hidden="true"></div>
+      </section>
+
+      <section class="home-manifesto" aria-label="رسالة الموقع">
+        <div class="manifesto-texture" aria-hidden="true"></div>
+        <div class="manifesto-pattern manifesto-pattern-top" aria-hidden="true"></div>
+        <div class="manifesto-pattern manifesto-pattern-bottom" aria-hidden="true"></div>
+
+        <div class="manifesto-copy">
+          <div class="manifesto-ornament" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="manifesto-number">فخر</span>
+          <h2> 13 حكاية، وطن واحد.</h2>
+          <p>من كل منطقة تبدأ حكاية وبكل حكاية يكتمل الوطن.</p>
+        </div>
+      </section>
+
+      <footer class="home-footer">
+        <div class="footer-pattern" aria-hidden="true"></div>
+        <div class="footer-inner">
+          <span class="footer-hashtag">#عزنا_بطبعنا</span>
+          <p class="footer-center">رحلة رقمية لاكتشاف مناطق المملكة</p>
+          <div class="footer-designers" aria-label="مصممات الموقع">
+            <span>By </span>
+            <a href="https://x.com/ialwejdan" target="_blank" rel="noopener noreferrer">X:@ialwejdan</a>
+            <i aria-hidden="true">•</i>
+            <a href="https://x.com/personnnnn29" target="_blank" rel="noopener noreferrer">X:@personnnnn29</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <section id="regionView" class="region-view" hidden>
+      <header class="region-topbar">
+        <a href="#home" class="back-link" aria-label="العودة إلى الخريطة">
+          <span>←</span>
+          <b>العودة للخريطة</b>
+        </a>
+
+        <div class="region-topbar-center">
+          <span id="regionCounter">01 / 13</span>
+          <strong id="regionTopName">الرياض</strong>
+        </div>
+
+        <a href="#home" class="region-brand" aria-label="العودة إلى الصفحة الرئيسية">
+          <img src="assets/brand-logo.png" alt="عزّنا بطبعنا">
+        </a>
+      </header>
+
+      <article id="regionArticle" class="region-article">
+        <section class="region-hero">
+          <div class="region-hero-media media-frame">
+            <img id="heroImage" src="assets/preview-photo.webp" alt="">
+            <div class="hero-shade"></div>
+          </div>
+          <div class="region-hero-side-pattern" aria-hidden="true"></div>
+          <div class="region-hero-stitch" aria-hidden="true"></div>
+
+          <div class="region-hero-content">
+            <span class="section-index">01</span>
+            <h1 id="regionName">الرياض</h1>
+            <p class="region-hero-line" id="regionHeroLine">هنا تمتد الهمّة.</p>
+            <p class="region-intro" id="regionIntro"></p>
+          </div>
+
+          <div class="region-hero-bottom-pattern" aria-hidden="true"></div>
+        </section>
+
+        <section class="story-section spirit-section">
+          <div class="section-edge-pattern section-edge-pattern-top" aria-hidden="true"></div>
+          <div class="section-heading">
+            <span class="section-index">02</span>
+            <div>
+              <span class="section-kicker">روح المنطقة</span>
+              <h2 id="spiritTitle"></h2>
+            </div>
+          </div>
+
+          <div class="spirit-layout">
+            <div class="spirit-copy">
+              <p id="spiritText"></p>
+              <div id="spiritKeywords" class="keywords"></div>
+            </div>
+
+            <div class="spirit-art">
+  <img
+    id="spiritImage"
+    src="assets/preview-photo.webp"
+    alt=""
+  >
+</div>
+            
+        </section>
+
+        <section class="story-section signature-section">
+          <div class="signature-side-pattern" aria-hidden="true"></div>
+          <div class="section-heading">
+            <span class="section-index">03</span>
+            <div>
+              <span class="section-kicker">بصمة المكان</span>
+              <h2>ملامح لا تشبه سواها</h2>
+            </div>
+          </div>
+          <div id="signatureGrid" class="signature-grid"></div>
+        </section>
+
+        <section class="story-section witnesses-section">
+          <div class="witnesses-texture" aria-hidden="true"></div>
+          <div class="section-heading">
+            <span class="section-index">04</span>
+            <div>
+              <span class="section-kicker">شواهد لا تُنسى</span>
+              <h2>أماكن تحفظ ذاكرة المنطقة</h2>
+            </div>
+          </div>
+          <div id="witnessesGrid" class="witnesses-grid"></div>
+        </section>
+
+        <section class="story-section history-section">
+          <div class="history-texture" aria-hidden="true"></div>
+          <div class="history-top-pattern" aria-hidden="true"></div>
+
+          <div class="history-layout">
+            <div class="history-copy">
+              <span class="section-index">05</span>
+              <span class="section-kicker">أحداث صنعت التاريخ</span>
+              <div class="history-period" id="historyPeriod"></div>
+              <h2 id="historyTitle"></h2>
+              <p id="historyText"></p>
+            </div>
+
+            <figure class="history-media media-frame">
+  <img
+    id="historyImage"
+    src="assets/preview-photo.webp"
+    alt=""
+  >
+</figure>
+          </div>
+        </section>
+
+        <section class="story-section compare-section">
+          <div class="compare-texture" aria-hidden="true"></div>
+          <div class="compare-edge-pattern compare-edge-pattern-top" aria-hidden="true"></div>
+          <div class="compare-edge-pattern compare-edge-pattern-bottom" aria-hidden="true"></div>
+
+          <div class="section-heading section-heading-center">
+            <span class="section-index">06</span>
+            <div>
+              <span class="section-kicker">ذاكرة المكان</span>
+              <h2>الماضي والحاضر</h2>
+            </div>
+          </div>
+
+          <div class="compare-shell" id="compareShell" style="--compare:50%;">
+            <div class="compare-present">
+  <img
+    id="presentImage"
+    src="assets/preview-photo.webp"
+    alt="المشهد في الحاضر"
+  >
+</div>
+
+<div class="compare-past">
+  <img
+    id="pastImage"
+    src="assets/preview-photo.webp"
+    alt="المشهد في الماضي"
+  >
+</div>
+
+            <span class="compare-label compare-label-past">الماضي</span>
+            <span class="compare-label compare-label-present">الحاضر</span>
+
+            <div class="compare-divider" aria-hidden="true">
+              <div class="compare-handle"><span>↔</span></div>
+            </div>
+
+            <input
+              id="compareRange"
+              class="compare-range"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="مقارنة المشهد بين الماضي والحاضر"
+            >
+          </div>
+        </section>
+
+        <footer class="region-ending">
+          <div class="ending-pattern ending-pattern-top" aria-hidden="true"></div>
+          <div class="ending-mark" aria-hidden="true"></div>
+          <p id="endingText"></p>
+          <a href="#home">اكتشف منطقة أخرى <span>←</span></a>
+          <div class="ending-pattern ending-pattern-bottom" aria-hidden="true"></div>
+        </footer>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
